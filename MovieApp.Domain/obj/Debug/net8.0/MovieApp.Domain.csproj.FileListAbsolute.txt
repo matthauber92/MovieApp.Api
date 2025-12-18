@@ -1,0 +1,11 @@
+/Users/matthauber/repos/MovieApp.Api/MovieApp.Domain/bin/Debug/net8.0/MovieApp.Domain.deps.json
+/Users/matthauber/repos/MovieApp.Api/MovieApp.Domain/bin/Debug/net8.0/MovieApp.Domain.dll
+/Users/matthauber/repos/MovieApp.Api/MovieApp.Domain/bin/Debug/net8.0/MovieApp.Domain.pdb
+/Users/matthauber/repos/MovieApp.Api/MovieApp.Domain/obj/Debug/net8.0/MovieApp.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/matthauber/repos/MovieApp.Api/MovieApp.Domain/obj/Debug/net8.0/MovieApp.Domain.AssemblyInfoInputs.cache
+/Users/matthauber/repos/MovieApp.Api/MovieApp.Domain/obj/Debug/net8.0/MovieApp.Domain.AssemblyInfo.cs
+/Users/matthauber/repos/MovieApp.Api/MovieApp.Domain/obj/Debug/net8.0/MovieApp.Domain.csproj.CoreCompileInputs.cache
+/Users/matthauber/repos/MovieApp.Api/MovieApp.Domain/obj/Debug/net8.0/MovieApp.Domain.dll
+/Users/matthauber/repos/MovieApp.Api/MovieApp.Domain/obj/Debug/net8.0/refint/MovieApp.Domain.dll
+/Users/matthauber/repos/MovieApp.Api/MovieApp.Domain/obj/Debug/net8.0/MovieApp.Domain.pdb
+/Users/matthauber/repos/MovieApp.Api/MovieApp.Domain/obj/Debug/net8.0/ref/MovieApp.Domain.dll
