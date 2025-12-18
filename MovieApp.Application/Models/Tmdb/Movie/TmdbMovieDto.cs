@@ -1,4 +1,4 @@
-namespace MovieApp.Application.Models;
+namespace MovieApp.Application.Models.Tmdb.Movie;
 
 public class TmdbMovieDto
 {

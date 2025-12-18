@@ -1,4 +1,6 @@
-namespace MovieApp.Application.Models;
+using MovieApp.Application.Models.Tmdb.Movie;
+
+namespace MovieApp.Application.Models.Tmdb;
 
 public class TmdbDiscoverResponse
 {

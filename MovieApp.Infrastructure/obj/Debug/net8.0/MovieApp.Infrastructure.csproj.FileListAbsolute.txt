@@ -15,3 +15,4 @@
 /Users/matthauber/repos/MovieApp.Api/MovieApp.Infrastructure/obj/Debug/net8.0/refint/MovieApp.Infrastructure.dll
 /Users/matthauber/repos/MovieApp.Api/MovieApp.Infrastructure/obj/Debug/net8.0/MovieApp.Infrastructure.pdb
 /Users/matthauber/repos/MovieApp.Api/MovieApp.Infrastructure/obj/Debug/net8.0/ref/MovieApp.Infrastructure.dll
+/Users/matthauber/repos/MovieApp.Api/MovieApp.Infrastructure/obj/Debug/net8.0/MovieApp.Infrastructure.sourcelink.json

@@ -1,4 +1,4 @@
-namespace MovieApp.Application.Models;
+namespace MovieApp.Application.Models.Tmdb;
 
 using System.Text.Json.Serialization;
 

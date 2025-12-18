@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using MovieApp.Application.Interfaces;
-namespace MovieApp.Api;
+
+namespace MovieApp.Api.Controllers;
 
 [ApiController]
 [Route("api/movies")]
@@ -13,6 +14,7 @@ public class MoviesController : ControllerBase
         _movies = movies;
     }
 
+    // GET api/movies?page=1
     [HttpGet]
     public async Task<IActionResult> GetActionMovies(
         [FromQuery] int page = 1)
@@ -30,7 +32,18 @@ public class MoviesController : ControllerBase
             return BadRequest("Query is required.");
 
         var results = await _movies.SearchAsync(query, page);
-
         return Ok(results);
+    }
+    
+    [HttpGet("{movieId:int}")]
+    public async Task<IActionResult> GetMovie(
+        [FromRoute] int movieId)
+    {
+        if (movieId <= 0)
+            return BadRequest("Invalid movie id.");
+
+        var movie = await _movies.GetMovieAsync(movieId);
+        
+        return Ok(movie);
     }
 }

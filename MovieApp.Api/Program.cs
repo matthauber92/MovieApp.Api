@@ -17,6 +17,7 @@ builder.Services.AddHttpClient<ITmdbProvider, TmdbProvider>(client =>
 
 
 builder.Services.AddScoped<IMovieCatalogService, MovieCatalogService>();
+builder.Services.AddScoped<ITvCatalogService, TvCatalogService>();
 
 var app = builder.Build();
 

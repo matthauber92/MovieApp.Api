@@ -37,3 +37,4 @@
 /Users/matthauber/repos/MovieApp.Api/MovieApp.Api/bin/Debug/net8.0/MovieApp.Application.pdb
 /Users/matthauber/repos/MovieApp.Api/MovieApp.Api/bin/Debug/net8.0/MovieApp.Infrastructure.pdb
 /Users/matthauber/repos/MovieApp.Api/MovieApp.Api/bin/Debug/net8.0/MovieApp.Domain.pdb
+/Users/matthauber/repos/MovieApp.Api/MovieApp.Api/obj/Debug/net8.0/MovieApp.Api.sourcelink.json

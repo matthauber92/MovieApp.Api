@@ -1,6 +1,7 @@
-namespace MovieApp.Application.Models;
-
 using System.Text.Json.Serialization;
+using MovieApp.Application.Models.Tmdb;
+
+namespace MovieApp.Application.Models;
 
 public class TmdbSearchResult
 {
@@ -24,8 +25,7 @@ public class TmdbSearchResult
 
     [JsonPropertyName("profile_path")]
     public string? ProfilePath { get; set; }
-
-    // 🔴 CHANGE THIS
+    
     [JsonPropertyName("release_date")]
     public string? ReleaseDate { get; set; }
 

@@ -1,4 +1,6 @@
-using MovieApp.Application.Models;
+using MovieApp.Application.Models.Tmdb;
+using MovieApp.Application.Models.Tmdb.Movie;
+using MovieApp.Application.Models.Tmdb.Tv;
 
 namespace MovieApp.Application.Interfaces;
 
@@ -13,6 +15,20 @@ public interface ITmdbProvider
         string query,
         int page,
         bool includeAdult = false,
+        string language = "en-US");
+    
+    Task<TmdbMovie> GetMovieAsync(
+        int movieId,
+        string language = "en-US");
+    
+    Task<TmdbTvSearchResponse> DiscoverTvAsync(
+        int page,
+        string? genreIds = null,
+        string language = "en-US");
+
+    Task<TmdbTvSearchResponse> SearchTvAsync(
+        string query,
+        int page = 1,
         string language = "en-US");
 }
 

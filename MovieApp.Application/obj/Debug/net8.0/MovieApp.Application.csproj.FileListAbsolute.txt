@@ -13,3 +13,4 @@
 /Users/matthauber/repos/MovieApp.Api/MovieApp.Application/obj/Debug/net8.0/refint/MovieApp.Application.dll
 /Users/matthauber/repos/MovieApp.Api/MovieApp.Application/obj/Debug/net8.0/MovieApp.Application.pdb
 /Users/matthauber/repos/MovieApp.Api/MovieApp.Application/obj/Debug/net8.0/ref/MovieApp.Application.dll
+/Users/matthauber/repos/MovieApp.Api/MovieApp.Application/obj/Debug/net8.0/MovieApp.Application.sourcelink.json

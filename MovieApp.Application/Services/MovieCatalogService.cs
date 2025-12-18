@@ -1,5 +1,7 @@
 using MovieApp.Application.Interfaces;
-using MovieApp.Application.Models;
+using MovieApp.Application.Models.Tmdb;
+using MovieApp.Application.Models.Tmdb.Movie;
+
 namespace MovieApp.Application.Services;
 
 public class MovieCatalogService : IMovieCatalogService
@@ -13,7 +15,6 @@ public class MovieCatalogService : IMovieCatalogService
 
     public Task<TmdbDiscoverResponse> DiscoverActionMoviesAsync(int page)
     {
-        // Action genre = 28
         return _tmdb.DiscoverMoviesAsync(page, genreIds: "28");
     }
     
@@ -55,5 +56,10 @@ public class MovieCatalogService : IMovieCatalogService
         }
 
         return results;
+    }
+    
+    public async Task<TmdbMovie> GetMovieAsync(int movieId)
+    {
+        return await _tmdb.GetMovieAsync(movieId);
     }
 }
