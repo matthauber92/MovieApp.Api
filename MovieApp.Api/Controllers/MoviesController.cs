@@ -16,10 +16,12 @@ public class MoviesController : ControllerBase
 
     // GET api/movies?page=1
     [HttpGet]
-    public async Task<IActionResult> GetActionMovies(
-        [FromQuery] int page = 1)
+    public async Task<IActionResult> GetMovies(
+        [FromQuery] int page = 1,
+        [FromQuery] string? genreIds = null
+        )
     {
-        var result = await _movies.DiscoverActionMoviesAsync(page);
+        var result = await _movies.DiscoverMoviesAsync(page, genreIds);
         return Ok(result);
     }
     

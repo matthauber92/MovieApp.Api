@@ -5,7 +5,7 @@ namespace MovieApp.Application.Interfaces;
 
 public interface IMovieCatalogService
 {
-    Task<TmdbDiscoverResponse> DiscoverActionMoviesAsync(int page);
+    Task<TmdbDiscoverResponse> DiscoverMoviesAsync(int page, string? genreIds = null);
     Task<List<SearchResultDto>> SearchAsync(string query, int page);
     Task<TmdbMovie> GetMovieAsync(int movieId);
 }

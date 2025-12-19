@@ -13,9 +13,9 @@ public class MovieCatalogService : IMovieCatalogService
         _tmdb = tmdb;
     }
 
-    public Task<TmdbDiscoverResponse> DiscoverActionMoviesAsync(int page)
+    public Task<TmdbDiscoverResponse> DiscoverMoviesAsync(int page, string? genreIds = null)
     {
-        return _tmdb.DiscoverMoviesAsync(page, genreIds: "28");
+        return _tmdb.DiscoverMoviesAsync(page, genreIds);
     }
     
     public async Task<List<SearchResultDto>> SearchAsync(string query, int page)

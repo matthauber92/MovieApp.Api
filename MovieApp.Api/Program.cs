@@ -4,7 +4,6 @@ using MovieApp.Infrastructure.Providers;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
@@ -18,6 +17,21 @@ builder.Services.AddHttpClient<ITmdbProvider, TmdbProvider>(client =>
 
 builder.Services.AddScoped<IMovieCatalogService, MovieCatalogService>();
 builder.Services.AddScoped<ITvCatalogService, TvCatalogService>();
+
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("LocalDev", policy =>
+    {
+        policy
+            .WithOrigins(
+                "http://localhost:3000",
+                "http://localhost:5173" // Vite default
+            )
+            .AllowAnyHeader()
+            .AllowAnyMethod();
+    });
+});
+
 
 var app = builder.Build();
 
@@ -34,5 +48,6 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.MapControllers();
+app.UseCors("LocalDev");
 
 app.Run();
