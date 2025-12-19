@@ -1,6 +1,7 @@
 using MovieApp.Application.Interfaces;
 using MovieApp.Application.Services;
 using MovieApp.Infrastructure.Providers;
+using System.Text.Json;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -31,7 +32,6 @@ builder.Services.AddCors(options =>
             .AllowAnyMethod();
     });
 });
-
 
 var app = builder.Build();
 

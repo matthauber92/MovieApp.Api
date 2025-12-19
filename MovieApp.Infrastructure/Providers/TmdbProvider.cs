@@ -31,8 +31,9 @@ public class TmdbProvider : ITmdbProvider
         if (!string.IsNullOrWhiteSpace(genreIds))
             url += $"&with_genres={genreIds}";
 
-        return await _http.GetFromJsonAsync<TmdbDiscoverResponse>(url)
-               ?? new TmdbDiscoverResponse();
+        var data = await _http.GetFromJsonAsync<TmdbDiscoverResponse>(url)
+                   ?? new TmdbDiscoverResponse();
+        return data;
     }
 
     public async Task<TmdbSearchResponse> SearchMultiAsync(
