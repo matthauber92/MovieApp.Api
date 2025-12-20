@@ -14,7 +14,7 @@ public class TmdbProvider : ITmdbProvider
     public TmdbProvider(HttpClient http)
     {
         _http = http;
-        _apiKey = "507916d1889dbe2a0bc48e45a6b7e79d"; // move to config later
+        _apiKey = "507916d1889dbe2a0bc48e45a6b7e79d";
     }
 
     public async Task<TmdbDiscoverResponse> DiscoverMoviesAsync(
@@ -22,19 +22,33 @@ public class TmdbProvider : ITmdbProvider
         string? genreIds,
         string language = "en-US")
     {
+        var today = DateTime.UtcNow.ToString("yyyy-MM-dd");
+
         var url =
             $"discover/movie" +
             $"?api_key={_apiKey}" +
             $"&page={page}" +
-            $"&language={language}";
+            $"&language={language}" +
+            $"&primary_release_date.lte={today}" +
+            $"&include_adult=false" +
+            $"&sort_by=popularity.desc";
 
-        if (!string.IsNullOrWhiteSpace(genreIds))
+        if (genreIds == "-1" || genreIds == null)
+        {
+            url += "&vote_count.gte=300";
+            url += "&vote_average.gte=6.5";
+        }
+        else
+        {
             url += $"&with_genres={genreIds}";
+        }
 
         var data = await _http.GetFromJsonAsync<TmdbDiscoverResponse>(url)
                    ?? new TmdbDiscoverResponse();
+
         return data;
     }
+
 
     public async Task<TmdbSearchResponse> SearchMultiAsync(
         string query,
@@ -50,10 +64,17 @@ public class TmdbProvider : ITmdbProvider
             $"&language={language}" +
             $"&include_adult={includeAdult.ToString().ToLower()}";
 
-        return await _http.GetFromJsonAsync<TmdbSearchResponse>(url)
-               ?? new TmdbSearchResponse();
-    }
+        var response = await _http.GetFromJsonAsync<TmdbSearchResponse>(url)
+                       ?? new TmdbSearchResponse();
 
+        // Filter out people only
+        response.Results = response.Results
+            .Where(r => r.MediaType == "movie" || r.MediaType == "tv")
+            .ToList();
+
+        return response;
+    }
+    
     public async Task<TmdbMovie> GetMovieAsync(
         int movieId,
         string language = "en-US")
@@ -77,14 +98,24 @@ public class TmdbProvider : ITmdbProvider
             $"discover/tv" +
             $"?api_key={_apiKey}" +
             $"&page={page}" +
-            $"&language={language}";
+            $"&language={language}" +
+            $"&include_adult=false" +
+            $"&sort_by=popularity.desc";
 
-        if (!string.IsNullOrWhiteSpace(genreIds))
+        if (genreIds == "-1" || genreIds == null)
+        {
+            url += "&vote_count.gte=200";
+            url += "&vote_average.gte=6.8";
+        }
+        else
+        {
             url += $"&with_genres={genreIds}";
+        }
 
         return await _http.GetFromJsonAsync<TmdbTvSearchResponse>(url)
                ?? new TmdbTvSearchResponse();
     }
+
 
     public async Task<TmdbTvSearchResponse> SearchTvAsync(
         string query,
@@ -100,5 +131,19 @@ public class TmdbProvider : ITmdbProvider
 
         return await _http.GetFromJsonAsync<TmdbTvSearchResponse>(url)
                ?? new TmdbTvSearchResponse();
+    }
+    
+    public async Task<TmdbTvResult> GetSeriesByIdAsync(
+        int seriesId,
+        string language = "en-US")
+    {
+        var url =
+            $"tv/{seriesId}" +
+            $"?api_key={_apiKey}" +
+            $"&language={language}";
+
+        return await _http.GetFromJsonAsync<TmdbTvResult>(url)
+               ?? throw new InvalidOperationException(
+                   $"TMDB returned null for TV series {seriesId}");
     }
 }

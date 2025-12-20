@@ -34,4 +34,16 @@ public class TvController : ControllerBase
         var results = await _tv.SearchTvAsync(query, page);
         return Ok(results);
     }
+    
+    [HttpGet("{seriesId:int}")]
+    public async Task<IActionResult> GetSeries(
+        [FromRoute] int seriesId)
+    {
+        if (seriesId <= 0)
+            return BadRequest("Invalid series id.");
+
+        var series = await _tv.GetSeriesByIdAsync(seriesId);
+        
+        return Ok(series);
+    }
 }

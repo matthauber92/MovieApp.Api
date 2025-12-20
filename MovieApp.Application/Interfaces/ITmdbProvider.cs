@@ -30,5 +30,9 @@ public interface ITmdbProvider
         string query,
         int page = 1,
         string language = "en-US");
+    
+    Task<TmdbTvResult> GetSeriesByIdAsync(
+        int seriesId,
+        string language = "en-US");
 }
 

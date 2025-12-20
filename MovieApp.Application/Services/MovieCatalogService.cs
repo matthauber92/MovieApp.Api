@@ -22,40 +22,20 @@ public class MovieCatalogService : IMovieCatalogService
     {
         var tmdbResponse = await _tmdb.SearchMultiAsync(query, page);
 
-        var results = new List<SearchResultDto>();
-
-        foreach (var item in tmdbResponse.Results)
-        {
-            if (item.MediaType == "movie")
+        return tmdbResponse.Results
+            .Where(i => i.MediaType is "movie" or "tv")
+            .Select(item => new SearchResultDto
             {
-                results.Add(new SearchResultDto
-                {
-                    Id = item.Id,
-                    Type = "movie",
-                    Title = item.Title ?? "",
-                    ImagePath = item.PosterPath,
-                    Popularity = item.Popularity
-                });
-            }
-            else if (item.MediaType == "person" && item.KnownFor?.Any() == true)
-            {
-                var known = item.KnownFor
-                    .OrderByDescending(k => k.Popularity)
-                    .First();
-
-                results.Add(new SearchResultDto
-                {
-                    Id = item.Id,
-                    Type = "person",
-                    Title = item.Name ?? "",
-                    Subtitle = $"Known for {known.Title}",
-                    ImagePath = item.ProfilePath,
-                    Popularity = item.Popularity
-                });
-            }
-        }
-
-        return results;
+                Id = item.Id,
+                Type = item.MediaType,
+                Title = item.MediaType == "movie"
+                    ? item.Title ?? "Unknown"
+                    : item.Name ?? "Unknown",
+                ImagePath = item.PosterPath,
+                BackdropPath = item.BackdropPath,
+                Popularity = item.Popularity,
+            })
+            .ToList();
     }
     
     public async Task<TmdbMovie> GetMovieAsync(int movieId)

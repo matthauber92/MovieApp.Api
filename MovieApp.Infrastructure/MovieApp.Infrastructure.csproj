@@ -10,4 +10,9 @@
       <ProjectReference Include="..\MovieApp.Application\MovieApp.Application.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <PackageReference Include="Dapper" Version="2.1.66" />
+      <PackageReference Include="Microsoft.Data.Sqlite" Version="10.0.1" />
+    </ItemGroup>
+
 </Project>

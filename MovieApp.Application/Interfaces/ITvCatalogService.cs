@@ -12,5 +12,8 @@ public interface ITvCatalogService
     Task<List<SearchResultDto>> SearchTvAsync(
         string query,
         int page);
-
+    
+    Task<TmdbTvResult> GetSeriesByIdAsync(
+        int seriesId,
+        string language = "en-US");
 }

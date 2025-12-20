@@ -49,4 +49,10 @@ public class TvCatalogService : ITvCatalogService
             .OrderByDescending(r => r.Popularity)
             .ToList();
     }
+    public async Task<TmdbTvResult> GetSeriesByIdAsync(
+        int seriesId,
+        string language = "en-US")
+    {
+        return await _tmdb.GetSeriesByIdAsync(seriesId, language);
+    }
 }
