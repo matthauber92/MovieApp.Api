@@ -12,7 +12,8 @@ public class SearchResultDto
 
     public string? ImagePath { get; set; }
     public string? BackdropPath { get; set; }
-
+    public string? ReleaseDate { get; set; }
+    public string? FirstAirDate { get; set; }
     public double Popularity { get; set; }
     public double VoteAverage { get; set; }
 }

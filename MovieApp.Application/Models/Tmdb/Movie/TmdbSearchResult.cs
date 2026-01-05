@@ -28,6 +28,8 @@ public class TmdbSearchResult
     
     [JsonPropertyName("release_date")]
     public string? ReleaseDate { get; set; }
+    [JsonPropertyName("first_air_date")]
+    public string? FirstAirDate { get; set; }
 
     public double Popularity { get; set; }
 

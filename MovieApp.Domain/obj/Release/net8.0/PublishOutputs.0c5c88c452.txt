@@ -1,0 +1,3 @@
+/Users/matthauber/repos/MovieApp.Api/MovieApp.Domain/bin/Release/net8.0/publish/MovieApp.Domain.dll
+/Users/matthauber/repos/MovieApp.Api/MovieApp.Domain/bin/Release/net8.0/publish/MovieApp.Domain.deps.json
+/Users/matthauber/repos/MovieApp.Api/MovieApp.Domain/bin/Release/net8.0/publish/MovieApp.Domain.pdb

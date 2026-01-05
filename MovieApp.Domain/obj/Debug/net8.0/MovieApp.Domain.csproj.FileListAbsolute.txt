@@ -9,3 +9,4 @@
 /Users/matthauber/repos/MovieApp.Api/MovieApp.Domain/obj/Debug/net8.0/refint/MovieApp.Domain.dll
 /Users/matthauber/repos/MovieApp.Api/MovieApp.Domain/obj/Debug/net8.0/MovieApp.Domain.pdb
 /Users/matthauber/repos/MovieApp.Api/MovieApp.Domain/obj/Debug/net8.0/ref/MovieApp.Domain.dll
+/Users/matthauber/repos/MovieApp.Api/MovieApp.Domain/obj/Debug/net8.0/MovieApp.Domain.sourcelink.json

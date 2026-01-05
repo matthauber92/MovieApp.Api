@@ -1,7 +1,6 @@
 using MovieApp.Application.Interfaces;
 using MovieApp.Application.Services;
 using MovieApp.Infrastructure.Providers;
-using System.Text.Json;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -26,7 +25,8 @@ builder.Services.AddCors(options =>
         policy
             .WithOrigins(
                 "http://localhost:3000",
-                "http://localhost:5173" // Vite default
+                "http://localhost:5173",
+                "https://movie-app-frontend-three.vercel.app/"
             )
             .AllowAnyHeader()
             .AllowAnyMethod();

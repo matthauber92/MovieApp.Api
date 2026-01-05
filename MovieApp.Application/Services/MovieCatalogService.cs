@@ -34,6 +34,9 @@ public class MovieCatalogService : IMovieCatalogService
                 ImagePath = item.PosterPath,
                 BackdropPath = item.BackdropPath,
                 Popularity = item.Popularity,
+                ReleaseDate = item.MediaType == "movie"
+                    ? item.ReleaseDate
+                    : item.FirstAirDate
             })
             .ToList();
     }

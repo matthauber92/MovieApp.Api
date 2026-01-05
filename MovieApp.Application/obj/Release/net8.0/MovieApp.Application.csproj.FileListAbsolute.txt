@@ -1,0 +1,16 @@
+/Users/matthauber/repos/MovieApp.Api/MovieApp.Application/bin/Release/net8.0/MovieApp.Application.deps.json
+/Users/matthauber/repos/MovieApp.Api/MovieApp.Application/bin/Release/net8.0/MovieApp.Application.dll
+/Users/matthauber/repos/MovieApp.Api/MovieApp.Application/bin/Release/net8.0/MovieApp.Application.pdb
+/Users/matthauber/repos/MovieApp.Api/MovieApp.Application/bin/Release/net8.0/MovieApp.Domain.dll
+/Users/matthauber/repos/MovieApp.Api/MovieApp.Application/bin/Release/net8.0/MovieApp.Domain.pdb
+/Users/matthauber/repos/MovieApp.Api/MovieApp.Application/obj/Release/net8.0/MovieApp.Application.csproj.AssemblyReference.cache
+/Users/matthauber/repos/MovieApp.Api/MovieApp.Application/obj/Release/net8.0/MovieApp.Application.GeneratedMSBuildEditorConfig.editorconfig
+/Users/matthauber/repos/MovieApp.Api/MovieApp.Application/obj/Release/net8.0/MovieApp.Application.AssemblyInfoInputs.cache
+/Users/matthauber/repos/MovieApp.Api/MovieApp.Application/obj/Release/net8.0/MovieApp.Application.AssemblyInfo.cs
+/Users/matthauber/repos/MovieApp.Api/MovieApp.Application/obj/Release/net8.0/MovieApp.Application.csproj.CoreCompileInputs.cache
+/Users/matthauber/repos/MovieApp.Api/MovieApp.Application/obj/Release/net8.0/MovieApp.Application.sourcelink.json
+/Users/matthauber/repos/MovieApp.Api/MovieApp.Application/obj/Release/net8.0/MovieApp.Application.csproj.CopyComplete
+/Users/matthauber/repos/MovieApp.Api/MovieApp.Application/obj/Release/net8.0/MovieApp.Application.dll
+/Users/matthauber/repos/MovieApp.Api/MovieApp.Application/obj/Release/net8.0/refint/MovieApp.Application.dll
+/Users/matthauber/repos/MovieApp.Api/MovieApp.Application/obj/Release/net8.0/MovieApp.Application.pdb
+/Users/matthauber/repos/MovieApp.Api/MovieApp.Application/obj/Release/net8.0/ref/MovieApp.Application.dll
