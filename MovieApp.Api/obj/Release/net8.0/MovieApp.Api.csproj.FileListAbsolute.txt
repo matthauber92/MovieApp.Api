@@ -66,3 +66,6 @@
 /Users/matthauber/repos/MovieApp.Api/MovieApp.Api/obj/Release/net8.0/MovieApp.Api.pdb
 /Users/matthauber/repos/MovieApp.Api/MovieApp.Api/obj/Release/net8.0/MovieApp.Api.genruntimeconfig.cache
 /Users/matthauber/repos/MovieApp.Api/MovieApp.Api/obj/Release/net8.0/ref/MovieApp.Api.dll
+/Users/matthauber/repos/MovieApp.Api/MovieApp.Api/bin/Release/net8.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+/Users/matthauber/repos/MovieApp.Api/MovieApp.Api/bin/Release/net8.0/Microsoft.Extensions.Logging.Abstractions.dll
+/Users/matthauber/repos/MovieApp.Api/MovieApp.Api/bin/Release/net8.0/System.Diagnostics.DiagnosticSource.dll

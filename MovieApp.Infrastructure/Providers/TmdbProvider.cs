@@ -82,7 +82,8 @@ public class TmdbProvider : ITmdbProvider
         var url =
             $"movie/{movieId}" +
             $"?api_key={_apiKey}" +
-            $"&language={language}";
+            $"&language={language}" +
+            $"&append_to_response=credits";
 
         return await _http.GetFromJsonAsync<TmdbMovie>(url)
                ?? throw new InvalidOperationException(
@@ -140,7 +141,8 @@ public class TmdbProvider : ITmdbProvider
         var url =
             $"tv/{seriesId}" +
             $"?api_key={_apiKey}" +
-            $"&language={language}";
+            $"&language={language}" +
+            $"&append_to_response=credits";
 
         return await _http.GetFromJsonAsync<TmdbTvResult>(url)
                ?? throw new InvalidOperationException(

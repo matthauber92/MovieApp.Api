@@ -66,7 +66,36 @@ public class TmdbTvResult
 
     [JsonPropertyName("next_episode_to_air")]
     public TmdbEpisode? NextEpisodeToAir { get; set; }
+    [JsonPropertyName("credits")]
+    public TmdbTvCredits? Credits { get; set; }
 }
+
+public class TmdbTvCredits
+{
+    public List<TmdbTvCastMember> Cast { get; set; } = new();
+}
+
+public class TmdbTvCastMember
+{
+    public int Id { get; set; }
+    public string? Name { get; set; }
+
+    [JsonPropertyName("character")]
+    public string? Character { get; set; }
+
+    [JsonPropertyName("profile_path")]
+    public string? ProfilePath { get; set; }
+
+    [JsonPropertyName("profileImageUrl")]
+    public string? ProfileImageUrl =>
+        ProfilePath == null
+            ? null
+            : $"https://image.tmdb.org/t/p/w185{ProfilePath}";
+
+    [JsonPropertyName("order")]
+    public int Order { get; set; }
+}
+
 
 public class TmdbGenre
 {

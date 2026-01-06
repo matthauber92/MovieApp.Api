@@ -67,6 +67,9 @@ public class TmdbMovie
 
     [JsonPropertyName("vote_count")]
     public int VoteCount { get; set; }
+    
+    [JsonPropertyName("credits")]
+    public TmdbCredits? Credits { get; set; }
 }
 
 public class TmdbCollection
@@ -118,3 +121,31 @@ public class TmdbSpokenLanguage
 
     public string? Name { get; set; }
 }
+
+public class TmdbCredits
+{
+    public List<TmdbCastMember> Cast { get; set; } = new();
+}
+
+public class TmdbCastMember
+{
+    public int Id { get; set; }
+    public string? Name { get; set; }
+
+    [JsonPropertyName("character")]
+    public string? Character { get; set; }
+
+    [JsonPropertyName("profile_path")]
+    public string? ProfilePath { get; set; }
+
+    [JsonPropertyName("profileImageUrl")]
+    public string? ProfileImageUrl =>
+        ProfilePath == null
+            ? null
+            : $"https://image.tmdb.org/t/p/w185{ProfilePath}";
+
+    [JsonPropertyName("order")]
+    public int Order { get; set; }
+}
+
+

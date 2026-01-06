@@ -8,6 +8,8 @@
 /Users/matthauber/repos/MovieApp.Api/publish/Dapper.dll
 /Users/matthauber/repos/MovieApp.Api/publish/Microsoft.AspNetCore.OpenApi.dll
 /Users/matthauber/repos/MovieApp.Api/publish/Microsoft.Data.Sqlite.dll
+/Users/matthauber/repos/MovieApp.Api/publish/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+/Users/matthauber/repos/MovieApp.Api/publish/Microsoft.Extensions.Logging.Abstractions.dll
 /Users/matthauber/repos/MovieApp.Api/publish/Microsoft.OpenApi.dll
 /Users/matthauber/repos/MovieApp.Api/publish/SQLitePCLRaw.batteries_v2.dll
 /Users/matthauber/repos/MovieApp.Api/publish/SQLitePCLRaw.core.dll
@@ -15,6 +17,7 @@
 /Users/matthauber/repos/MovieApp.Api/publish/Swashbuckle.AspNetCore.Swagger.dll
 /Users/matthauber/repos/MovieApp.Api/publish/Swashbuckle.AspNetCore.SwaggerGen.dll
 /Users/matthauber/repos/MovieApp.Api/publish/Swashbuckle.AspNetCore.SwaggerUI.dll
+/Users/matthauber/repos/MovieApp.Api/publish/System.Diagnostics.DiagnosticSource.dll
 /Users/matthauber/repos/MovieApp.Api/publish/runtimes/browser-wasm/nativeassets/net8.0/e_sqlite3.a
 /Users/matthauber/repos/MovieApp.Api/publish/runtimes/linux-arm/native/libe_sqlite3.so
 /Users/matthauber/repos/MovieApp.Api/publish/runtimes/linux-arm64/native/libe_sqlite3.so
